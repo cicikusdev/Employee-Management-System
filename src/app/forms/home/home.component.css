@@ -1,0 +1,114 @@
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  max-width: 300px;
+}
+
+.dialog-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.selected-row {
+  background-color: #f0f8ff;
+}
+
+.detail-row{
+  transition: 0.3s;
+}
+
+/* Topbar */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: purple;
+  color: white;
+  padding: 10px 20px;
+}
+
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed; /* sayfada sabit konumda kalması için */
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  color: white;
+  overflow-x: hidden;
+  transition: 0.3s; /* yumuşak açılıp kapanma */
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  z-index: 1000; /* sidebar'ı diğer tüm elementlerin üstüne çıkarır */
+}
+
+/* sidebar açık olduğunda */
+.sidebar.open {
+  left: 0; /* görünür hale gelir */
+}
+
+/* Sidebar bağlantıları */
+.sidebar a {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+.sidebar a:hover {
+  background-color: #575757;
+}
+
+/* Sayfa içerik düzenlemesi */
+.content {
+  margin-left: 0;
+  transition: margin-left 0.3s; /* Sidebar açılırken animasyon */
+}
+
+.sidebar.open ~ .content {
+  margin-left: 250px; /* Sidebar genişliğine eşit */
+}
+
+.close-btn{
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+.close-btn:hover{
+  color:#ccc;
+}
